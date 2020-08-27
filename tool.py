@@ -4,8 +4,8 @@ print("Hello User! How can I help you?")
 pyttsx3.speak("Hello User! How can I help you?")
 while(True):
     p=input("User: ")
-    if(("chrome" in p) or ("internet" in p)):
-        if(("don't" in p) or ("dont" in p) or ("do not" in p) or ("Don't" in p) or ("")):
+    if(("chrome" in p) or ("internet" in p) or("net" in p) or ("Chrome" in p) or ("Internet" in p) or("Net" in p)):
+        if(("don't" in p) or ("dont" in p) or ("do not" in p) or ("Don't" in p) or ("Dont" in p)):
             print("OK! What else can I do for you?") 
             pyttsx3.speak("OK! What else can I do for you?")
         else:
@@ -21,9 +21,9 @@ while(True):
     elif(("mails" in p) or ("email" in p) or ("emails" in p)):
         os.system("start chrome gmail.com")
     elif(("stop" in p) or ("exit" in p)):
-        exit()
+        break
     else:
-        print("Sorry I do not Understand! :(")
+        print("Sorry I do not Understand!")
         print("You can try browsing internet or")
         print("You can try checking your mails")
         print("You can launch Notepad to work")
