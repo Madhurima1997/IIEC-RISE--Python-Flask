@@ -54,13 +54,21 @@ while(True):
     elif(("Thanks" in p) or ("Thank" in p) or ("thanks" in p) or ("thank" in p)):
         print("Glad to help you!")
         pyttsx3.speak("Glad to help you!")
-    elif(("mails" in p) or ("email" in p) or ("emails" in p)):
-        os.system("start chrome gmail.com")
+    elif(("mails" in p) or ("email" in p) or ("emails" in p) or ("Mail" in p) or ("Email" in p) or ("Emails" in p) or ("mail" in p)):
+        if (("don't" in p) or ("dont" in p) or ("do not" in p) or ("Don't" in p) or ("Dont" in p)):
+            print("OK! What else can I do for you?")
+            pyttsx3.speak("OK! What else can I do for you?")
+        else:
+            print("Launching Gmail for you!")
+            pyttsx3.speak("Launching Gmail for you")
+            os.system("start chrome gmail.com")
+            print("What else can I do for you?") 
+            pyttsx3.speak("What else can I do for you?")
     elif(("stop" in p) or ("exit" in p) or ("Exit" in p) or ("Stop" in p) or ("will be all" in p) or ("That's all" in p) or ("that's all" in p) or ("thats all" in p)):
         break
     else:
         print("Sorry I do not Understand!")
-        pyttsx3.speak("Sorry I do not Understand!")
+        pyttsx3.speak("Sorry I do not Understand! You can try the following")
         print("You can try browsing internet or")
         print("You can try checking your mails")
         print("You can launch Notepad to work")
