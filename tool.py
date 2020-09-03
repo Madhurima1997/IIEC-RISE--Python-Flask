@@ -64,6 +64,16 @@ while(True):
             os.system("start chrome gmail.com")
             print("What else can I do for you?") 
             pyttsx3.speak("What else can I do for you?")
+    elif(("navigate" in p) or ("navigator" in p) or ("Navigate" in p) or ("Navigator" in p) or ("place" in p) or ("Place" in p) or ("map" in p) or ("Map" in p) or ("maps" in p) or ("Maps" in p)):
+        if (("don't" in p) or ("dont" in p) or ("do not" in p) or ("Don't" in p) or ("Dont" in p) or ("Do not" in p)):
+            print("OK! What else can I do for you?")
+            pyttsx3.speak("OK! What else can I do for you?")
+        else:
+            print("Launching Maps for you!")
+            pyttsx3.speak("Launching Maps for you")
+            os.system("start chrome gmail.com/maps")
+            print("What else can I do for you?") 
+            pyttsx3.speak("What else can I do for you?")
     elif(("stop" in p) or ("exit" in p) or ("Exit" in p) or ("Stop" in p) or ("will be all" in p) or ("That's all" in p) or ("that's all" in p) or ("thats all" in p)):
         break
     else:
